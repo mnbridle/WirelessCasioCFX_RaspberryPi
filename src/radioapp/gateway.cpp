@@ -21,7 +21,7 @@ void gateway()
     }
 
     drf4463.setFrequency(433.920);
-    drf4463.setTxPower(0x7f);
+    drf4463.setTxPower(0x05);
 
     status_report_timer = millis();
 
@@ -43,6 +43,8 @@ void gateway()
             {
             Serial.print("got request from : 0x");
             Serial.print(from, HEX);
+            Serial.print(" length: ");
+            Serial.print(len);
             Serial.print(": ");
             Serial.println((char*)buf);
         
