@@ -1,4 +1,4 @@
-# Wireless Casio FX9750G Plus code
+# Raspberry Pi component of the Wireless Casio FX9750G Plus project
 ## Getting started
 
 First install VSCode, then install the PlatformIO plugin.
