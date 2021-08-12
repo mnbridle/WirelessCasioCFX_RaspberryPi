@@ -4,7 +4,7 @@
 #include <RH_RF24.h>
 
 // USB Raspberry Pi interface includes
-#include "usb_interface/usb_interface.hpp"
+//#include "usb_interface/usb_interface.hpp"
 
 // Define IO pins
 #define DRF4463_SDN 1
