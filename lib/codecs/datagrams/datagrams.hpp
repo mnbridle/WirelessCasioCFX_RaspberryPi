@@ -1,6 +1,8 @@
 #pragma once
 
 #include <Arduino.h>
+#include <string>
+#include <ctime>
 
 enum class DatagramType : uint8_t
 {
@@ -15,4 +17,26 @@ enum class DatagramType : uint8_t
     GET_IDENTITY = 0xF1,
     SET_DATETIME = 0xF2,
     GET_DATETIME = 0xF3,
+};
+
+using namespace std;
+class TextMessage
+{
+    public:
+        void encode(uint8_t* buf, string sender, string recipient, string message_name, string message_contents, time_t msg_time);
+        void decode(uint8_t* buf);
+
+        std::string getMessageName();
+        std::string getMessageContents();
+        std::string getRecipient();
+        std::string getSender();
+        time_t getMsgTime();
+
+    private:
+        std::string m_message_name;
+        std::string m_message_contents;
+        std::string m_recipient;
+        std::string m_sender;
+        time_t m_msg_time;
+
 };
