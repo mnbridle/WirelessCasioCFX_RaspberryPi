@@ -20,6 +20,10 @@ enum class DatagramType : uint8_t
 };
 
 using namespace std;
+
+namespace data
+{
+
 class TextMessage
 {
     public:
@@ -40,3 +44,5 @@ class TextMessage
         time_t m_msg_time;
 
 };
+
+}

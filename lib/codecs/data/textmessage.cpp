@@ -2,11 +2,12 @@
 #include <iostream>
 #include <sstream>
 
-#include "datagrams.hpp"
-#include "helpers.hpp"
+#include "textmessage.hpp"
+#include "../helpers/helpers.hpp"
 
 using namespace std;
 using namespace Helpers;
+using namespace data;
 
 void TextMessage::decode(uint8_t* buf)
 {
